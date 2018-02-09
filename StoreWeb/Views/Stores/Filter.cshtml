@@ -5,10 +5,19 @@
     ViewData["Title"] = "Filter";
 }
 
-<h2>Filter</h2>
+<h2>Filter the customer by category</h2>
 
-@foreach (var item in Model)
-{
-
-}
+<div class="container">
+    <div class="jumbotron">   
+        @foreach (var item in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    @Html.Label(item.Name)
+                    </div>
+                @Html.Partial("Gadget", item)
+            </div>
+        }
+   </div>
+</div>
 
